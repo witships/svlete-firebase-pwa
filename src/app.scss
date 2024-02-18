@@ -1,0 +1,31 @@
+:root {
+	--main-color: #55bac9;
+	--back-color: #c5e0e4;
+}
+body {
+	margin: 0;
+	background-image: url('images/beach02.png');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	overflow: hidden;
+}
+// .ml-auto {
+// 	margin-left: auto;
+// }
+button {
+	cursor: pointer;
+	border: gray solid 1px;
+	border-radius: 0.3rem;
+	padding: 0 0.5rem;
+	&.yes {
+		background-color: var(--main-color);
+	}
+	&:hover {
+		// filter: brightness(1.5);
+		filter: contrast(1.5);
+	}
+	&:active {
+		filter: contrast(0.8);
+	}
+}

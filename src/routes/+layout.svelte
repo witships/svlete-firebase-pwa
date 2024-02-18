@@ -1,6 +1,8 @@
 <script lang="ts">
+	import '../app.scss';
 	import HeaderNav from '$lib/HeaderNav.svelte';
-	import { userName } from '$lib/store';
+	import { userName, showLogin } from '$lib/store';
+	import Login from '$lib/Login.svelte';
 </script>
 
 <HeaderNav />
@@ -14,8 +16,7 @@
 
 <slot />
 
-<style lang="scss">
-	:global(body) {
-		margin: 0;
-	}
-</style>
+<!-- ログイン -->
+{#if $showLogin}
+	<Login />
+{/if}
