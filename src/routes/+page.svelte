@@ -2,7 +2,9 @@
 	import { userName } from '$lib/store';
 </script>
 
-<h1>Welcome, {$userName}さん</h1>
+{#if $userName}
+	<h1>Welcome, {$userName}さん</h1>
+{/if}
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <h3>{$userName}</h3>
 

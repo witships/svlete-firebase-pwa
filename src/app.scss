@@ -2,17 +2,16 @@
 	--main-color: #55bac9;
 	--back-color: #c5e0e4;
 }
+
 body {
 	margin: 0;
-	background-image: url('/static/images/beach02.png');
+	background-image: url('/images/beach02.png');
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 	overflow: hidden;
 }
-// .ml-auto {
-// 	margin-left: auto;
-// }
+
 button {
 	cursor: pointer;
 	border: gray solid 1px;
@@ -22,7 +21,6 @@ button {
 		background-color: var(--main-color);
 	}
 	&:hover {
-		// filter: brightness(1.5);
 		filter: contrast(1.5);
 	}
 	&:active {

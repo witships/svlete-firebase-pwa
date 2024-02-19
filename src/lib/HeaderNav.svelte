@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { userName, showLogin } from '$lib/store';
-	import { auth } from '$lib/firebase'; //firebase.jsのauthを通じて初期化
-	import { signOut } from 'firebase/auth'; // ログアウト機能を利用
+	import { userName, showLogin } from '$lib/store'; // 共通データ
+	import { auth } from '$lib/firebase'; //firebaseに接続
+	import { signOut } from 'firebase/auth'; // ログアウト
 	import { goto } from '$app/navigation';
 
+	// 動作チェック用
 	function check() {
 		if (auth.currentUser) {
 			$userName = auth.currentUser.email || '';
@@ -13,6 +14,7 @@
 		}
 	}
 
+	// ログアウト
 	function logout() {
 		signOut(auth)
 			.then(() => {
@@ -29,9 +31,9 @@
 <nav>
 	<a href="/" class="logo">たいとる</a>
 	<ul class="menu">
-		<li>
+		<!-- <li>
 			<button on:click={check}> 確認 </button>
-		</li>
+		</li> -->
 		{#if !$userName}
 			<li>
 				<a href="/signup">

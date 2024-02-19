@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { userName } from '$lib/store';
-	import { auth } from '$lib/firebase'; //firebase.jsのauthを通じて初期化
-	import { createUserWithEmailAndPassword } from 'firebase/auth'; //サインアップの利用登録
+	import { auth } from '$lib/firebase'; //firebase
+	import { createUserWithEmailAndPassword } from 'firebase/auth'; //サインアップ
 	import { goto } from '$app/navigation';
 
 	// ユーザー登録
